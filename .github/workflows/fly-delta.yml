@@ -4,22 +4,13 @@ env:
     BUILDKITE_API_ACCESS_TOKEN:  ${{ secrets.TRIGGER_BK_BUILD_TOKEN }} 
 
 jobs:
-  Fly-Delta:
+  Fly-Delta-JS:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Buildkite Pipeline
-        uses: buildkite/trigger-pipeline-action@pr-33-review
-        env:
-          PIPELINE: "lzrbktest/more-pipelines-tests"
-          BRANCH: master
-          COMMIT: HEAD
-          MESSAGE:  ":buildkite:💛💚💙💜 :github: 💛💚💙💜 Using buildkite/trigger-pipeline-action@pr-33-review: ${{ github.event.head_commit.message }}  " 
-          BUILD_META_DATA: '{"PIPELINE-TRIGGER-SRC": "trigger-pipeline-action"}'
       - name: Trigger a Buildkite Build
         uses: "buildkite/trigger-pipeline-action@v1.4.0"
         env:
-          PIPELINE: "lzrbktest/trigger-from-gha-demo"
-          BRANCH: ${{ github.ref }}
-          COMMIT: ${{ github.sha }}
+          PIPELINE: "jamessammut-dot-corp/example-groups"
+          BRANCH: master
           MESSAGE:  ":buildkite::github: 🚀🚀🚀 Triggered from GHA: ${{ github.event.head_commit.message }}"
           
