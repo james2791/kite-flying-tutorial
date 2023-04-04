@@ -11,6 +11,7 @@ jobs:
         uses: "buildkite/trigger-pipeline-action@v1.4.0"
         env:
           PIPELINE: "jamessammut-dot-corp/example-groups"
-          BRANCH: master
+          BRANCH: "master"
+          COMMIT: "HEAD"
           MESSAGE:  ":buildkite::github: 🚀🚀🚀 Triggered from GHA: ${{ github.event.head_commit.message }}"
           
