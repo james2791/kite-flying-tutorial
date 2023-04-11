@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger a Buildkite Build
-        uses: "buildkite/trigger-pipeline-action@v1.4.0"
+        uses: "buildkite/trigger-pipeline-action@65e57ec145f921041570e3eb3e8cc16a19facf3f"
         env:
           PIPELINE: "jamessammut-dot-corp/example-groups"
           BRANCH: "master"
