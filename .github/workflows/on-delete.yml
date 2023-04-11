@@ -1,4 +1,4 @@
-name: Flying Delta
+name: Flying Delta Delete
 on: [delete]   
 env:
     BUILDKITE_API_ACCESS_TOKEN:  ${{ secrets.TRIGGER_BK_BUILD_TOKEN }} 
