@@ -14,4 +14,4 @@ jobs:
           BRANCH: "master"
           COMMIT: "HEAD"
           MESSAGE: ":buildkite::github: 🚀🚀 Triggered from GHA: ${{ github.event.head_commit.message }}"
-          
+          BUILD_ENV_VARS: '{"FOO": "push"}'
