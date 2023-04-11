@@ -15,3 +15,16 @@ jobs:
           COMMIT: "HEAD"
           MESSAGE: ":buildkite::github: 🚀🚀 Triggered from GHA: ${{ github.event.head_commit.message }}"
           
+on: [delete]          
+jobs:
+  Fly-Delta-JS:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger a Buildkite Build
+        uses: "buildkite/trigger-pipeline-action@v1.4.0"
+        env:
+          PIPELINE: "jamessammut-dot-corp/example-groups"
+          BRANCH: "master"
+          COMMIT: "HEAD"
+          MESSAGE:  ":buildkite::github: 🚀🚀 Triggered from GHA Delete: ${{ github.event.head_commit.message }}"
+          
